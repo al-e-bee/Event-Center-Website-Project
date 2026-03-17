@@ -4,22 +4,108 @@
     box-sizing: border-box;
 }
 
+/* TITLE FONT */
+/* .playfair-display-<uniquifier> {
+  font-family: "Playfair Display", serif;
+  font-optical-sizing: auto;
+  font-weight: <weight>;
+  font-style: normal;
+} */
+
+/* HEADER CSS */
+
 header{
     display: flex;
     justify-content: space-between;
+    align-items: center;
     padding: 20px;
+    background-color: #222725;
 }
 
 .logo{
     text-decoration: none;
-    font-size: 2.5em;
+    font-size: 3em;
     font-weight: bold;
+    font-family: "Playfair Display", serif;
+    color: #f7f7f2;
 }
 .navigation{
     display: flex;
     gap: 20px;
+    padding: 0;
 }
 
 .navigation li{
     list-style: none;
+}
+
+.navigation li a{
+    text-decoration: none;
+    color: #f7f7f2;
+    font-family: "Inter", sans-serif;
+    text-transform: uppercase;
+    font-size: 1em;
+    transition: transform 0.2s ease, color 0.2s ease;
+}
+
+.navigation li a:hover{
+    /* transform: scale(1.15); */
+    transform: scale(1.2);
+    color: #e59500;
+}
+
+    .menu-toggle{
+    color: #fff;
+    font-size: 20px;
+    cursor: pointer;
+    display: none;
+}
+
+
+/* MOBILE DEVICE STYLING */
+
+@media only screen and (max-width: 599px){
+    .menu-toggle{
+        display: block;
+        font-size: 2em;
+        z-index: 1001;
+    }
+
+    header .navigation{
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        color: #f7f7f2;
+        top: 170px; /* Position ourself below the navbar */
+        left: 0;
+        right: 0;
+        padding: 20px 0;
+        z-index: 1000; /* Staying above other elements */
+        gap: 10px;
+    }
+
+    header .navigation.active{
+        display: flex;
+}
+
+    header .navigation li{
+        text-align: center;
+        width: 100%;
+}
+
+    header .navigation li a{
+        text-decoration: none;
+        color: #2f2f2f;
+        font-weight: 400;
+        font-size: 1.2em;
+        padding: 10px;
+        display: block;
+}
+
+    header .navigation li a:active{
+        color: #e59500;
+        transform: scale(.98);
+        transition: transform 0.3s ease;
+}
+
 }
