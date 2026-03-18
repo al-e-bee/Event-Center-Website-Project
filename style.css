@@ -4,6 +4,12 @@
     box-sizing: border-box;
 }
 
+/* PARAGRAPH FONT */
+
+.text-font{
+    font-size: 1em;
+    font-family: "Inter", sans-serif;
+}
 
 /* HEADER CSS */
 
@@ -105,8 +111,8 @@ header{
 }
 
 .hero-content p{
-    font-size: 1em;
-    font-family: "Inter", sans-serif;
+    /* font-size: 1em;
+    font-family: "Inter", sans-serif; */
     text-align: center;
     color: #f7f7f2;
 }
@@ -153,6 +159,9 @@ header{
 
 .testimonials{
     background-color: #22272596;
+    box-shadow: 0px 15px 20px -10px rgba(0, 0, 0, 0.3);
+    position: relative;
+    z-index: 10;
 }
 
 .testimonials .title{
@@ -214,8 +223,8 @@ header{
 }
 
 .box p{
-    font-family: "Inter", sans-serif;
-    font-size: 1em;
+    /* font-family: "Inter", sans-serif;
+    font-size: 1em; */
     color: #222725;
     padding: 10px 10px 20px;
     text-wrap: wrap;
@@ -227,6 +236,94 @@ header{
     text-align: center;
     text-transform: uppercase;
 }
+
+/* CONTACT SECTION */
+
+.contact{
+    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(https://images.unsplash.com/photo-1472262808738-234c7a128280?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
+    background-size: cover;
+    padding: 0px 20px 20px;
+    background-color: #f7f7f2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.contact-wrapper{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+    justify-content: flex-start;
+}
+
+.contact .title{
+    align-self: flex-start;
+    padding-left: 0px;
+    color: #f7f7f2;
+}
+
+.contact .text-font{
+    font-size: 0.8em;
+}
+
+.contactform{
+    padding: 40px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 15px 25px;
+    background: #f7f7f2;
+    width: 100%;
+    max-width: 600px;
+    border-radius: 8px;
+    align-self: flex-start;
+    letter-spacing: .1em;
+    border-top: 4px solid #e59500;
+}
+
+.contactform h3{
+    margin-bottom: 20px;
+    font-family: "Playfair Display", serif;
+    color: #222725;
+    
+}
+
+.contactform .inputbox{
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.contactform .inputbox input,
+.contactform .inputbox textarea{
+    width: 100%;
+    border: 1px solid #22272596;
+    color: #22272596;
+    border-radius: 8px;
+    padding: 10px;
+    outline: none;
+    font-weight: 300;
+    resize: none;
+    font-size: 1em;
+    font-family: "Inter", sans-serif;
+}
+
+.contactform .inputbox input[type="submit"]{
+    background-color: #222725;
+    color: #f7f7f2;
+}
+
+.contactform .inputbox input[type="submit"]:hover{
+    background-color: #222725;
+    color: #e59500;
+    transform: scale(1.05);
+    transition: transform 0.3s ease;
+}
+
+
+
+
+
+
+
+
 /* MOBILE DEVICE STYLING */
 
 @media only screen and (max-width: 599px){
