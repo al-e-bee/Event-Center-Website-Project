@@ -19,6 +19,7 @@ header{
     align-items: center;
     padding: 20px;
     background-color: #222725;
+    width: 100%;
 }
 
 .logo{
@@ -31,7 +32,8 @@ header{
 
 .logo span, 
 .hero-title span,
-.title span{
+.title span,
+.footer-container span{
     color: #e59500;
 }
 
@@ -266,6 +268,9 @@ header{
     flex-direction: column;
     align-items: center;
     background-position: center;
+    box-shadow: 0px 15px 20px -10px rgba(0, 0, 0, 0.3);
+    position: relative;
+    z-index: 10;
 }
 
 .contact-wrapper{
@@ -339,6 +344,43 @@ header{
     background-color: #222725;
     color: #e59500;
     transform: scale(1.05);
+    transition: transform 0.3s ease;
+}
+
+/* FOOTER SECTION */
+
+.footer-container{
+    background-color: #f7f7f2;
+    width: 100%;
+    height: 70px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+}
+
+.footer-container p{
+    font-family: "Playfair Display", serif;
+    display: inline-block;
+    margin-top: 20px;
+    font-size: 1em;
+}
+
+.footer-links{
+    display: flex;
+    justify-content: space-between;
+    gap: 25px;
+    margin: 0 40px;
+}
+
+.footer-links i{
+    color: #222725;
+    font-size: 1.5em;
+}
+
+.footer-links i:hover{
+    transform: scale(1.15);
+    color: #e59500;
     transition: transform 0.3s ease;
 }
 
