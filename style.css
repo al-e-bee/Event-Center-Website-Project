@@ -4,6 +4,10 @@
     box-sizing: border-box;
 }
 
+html{
+    scroll-behavior: smooth;
+}
+
 /* PARAGRAPH FONT */
 
 .text-font{
@@ -135,6 +139,7 @@ header{
     background-color: #f7f7f2;
     color: #222725;
     transform: scale(1.1);
+    transition: transform 0.3s ease, color 0.3s ease;
 }
 
 /* GALLERY SECTION */
@@ -356,21 +361,31 @@ header{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px;
+    padding: 0 50px;
 }
 
-.footer-container p{
+.footer-text, .footer-links, .footer-right{
+    flex: 1;
+}
+
+.footer-container .footer-text p{
     font-family: "Playfair Display", serif;
     display: inline-block;
     margin-top: 20px;
+    margin-bottom: 20px;
     font-size: 1em;
 }
 
 .footer-links{
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     gap: 25px;
     margin: 0 40px;
+}
+
+.footer-right{
+    display: flex;
+    justify-content: flex-end;
 }
 
 .footer-links i{
@@ -385,11 +400,29 @@ header{
 }
 
 
+/* BACK TO TOP BUTTON */
 
+#backToTop {
+    display: none; /* Hidden by default */
+    bottom: 30px; 
+    right: 30px; 
+    z-index: 999; 
+    border: none; 
+    outline: none; 
+    background-color: #e59500; 
+    color: white; 
+    cursor: pointer; 
+    padding: 10px 15px; 
+    border-radius: 5px; /* Circle shape */
+    font-size: 1.2em;
+    transition: 0.3s;
+    box-shadow: 0px 5px 15px rgba(0,0,0,0.3);
+}
 
-
-
-
+#backToTop:hover {
+    background-color: #222725; /* Switch to your dark green on hover */
+    transform: scale(1.1);
+}
 
 /* MOBILE DEVICE STYLING */
 
