@@ -142,45 +142,7 @@ header{
     transition: transform 0.3s ease, color 0.3s ease;
 }
 
-/* GALLERY SECTION */
 
-.gallery{
-    background-color: #f7f7f2;
-    position: relative;
-    box-shadow: 0px 15px 20px -10px rgba(0, 0, 0, 0.3);
-    z-index: 1;
-}
-
-.gallery-grid{
-    display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    gap: 20px;
-    padding: 20px;
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
-.gallery-grid img{
-    width: 100%;
-    height: 200px;
-    object-fit: cover;
-    box-shadow: 0px 15px 20px -10px rgba(0, 0, 0, 0.2);
-    border-radius: 8px;
-    transition: transform 0.3s ease;
-}
-
-.gallery-grid img:hover{
-    transform: scale(1.05);
-}
-
-.title{
-    font-family: "Playfair Display", serif;
-    font-size: 1.4em;
-    /* text-transform: uppercase; */
-    letter-spacing: 1.1px;
-    padding: 20px 0 0 20px ;
-    color: #222725;
-}
 
 /* TESTIMONIALS SECTION */
 
@@ -188,7 +150,7 @@ header{
     background-color: #22272596;
     box-shadow: 0px 15px 20px -10px rgba(0, 0, 0, 0.3);
     position: relative;
-    z-index: 10;
+    z-index: 20;
 }
 
 .testimonials .title{
@@ -271,9 +233,9 @@ header{
 /* CONTACT SECTION */
 
 .contact{
-    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(https://images.unsplash.com/photo-1714276729981-da1b0a0a40af?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
+    background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(https://images.pexels.com/photos/15212812/pexels-photo-15212812.jpeg);
     background-size: cover;
-    padding: 0px 20px 20px;
+    padding: 0px 20px 90px;
     background-color: #f7f7f2;
     display: flex;
     flex-direction: column;
@@ -284,10 +246,19 @@ header{
     z-index: 10;
 }
 
+.contact-container{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    padding: 0px 20px 30px;
+}
+
+
 .contact-wrapper{
     width: 100%;
     display: flex;
-    justify-content: center;
     margin-top: 30px;
     justify-content: flex-start;
 }
@@ -304,7 +275,7 @@ header{
 
 .contactform{
     padding: 40px;
-    box-shadow: rgba(0, 0, 0, 0.1) 0px 15px 25px;
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 15px 25px;
     /* background: #f7f7f2; */
     background: rgba(247, 247, 242, 0.6);
     backdrop-filter: blur(10px);
@@ -313,10 +284,12 @@ header{
     width: 100%;
     max-width: 600px;
     border-radius: 8px;
-    align-self: flex-start;
-    flex-grow: 1;
+    /* align-self: flex-start; */
+    /* flex-grow: 1; */
     letter-spacing: .1em;
     border-top: 4px solid #e59500;
+    position: relative;
+    z-index: 10;
 }
 
 .contactform h3{
@@ -358,6 +331,21 @@ header{
     transition: transform 0.3s ease;
 }
 
+.contact-img{
+    border-radius: 8px;
+    box-shadow: 0px 15px 20px -10px rgba(0, 0, 0, 0.2);
+}
+
+.contact-img .stack-img.bottom{
+    width: 100%;
+    height: 450px;
+}
+
+.contact-img .stack-img.top{
+    width: 100%;
+    height: 250px;
+}
+
 /* FOOTER SECTION */
 
 .footer-container{
@@ -374,11 +362,22 @@ header{
     flex: 1;
 }
 
+.footer-text{
+    display: flex;
+}
+
+.footer-logo{
+    height: 50px;
+    width: 50px;
+    margin: 0px 10px
+    /* png image from pngtree.com */
+}
+
 .footer-container .footer-text p{
     font-family: "Playfair Display", serif;
     display: inline-block;
     margin-top: 20px;
-    margin-bottom: 20px;
+    margin-bottom: 0px;
     font-size: 1em;
 }
 
@@ -435,6 +434,7 @@ header{
 .active-link{
     color: #e59500 !important;
     font-weight: bold;
+    border-bottom: 2px solid #e59500;
 }
 
 .about{
@@ -460,16 +460,11 @@ header{
 .about .col-50 .title {
     font-size: 2em;
     margin-top: 0;      
-    padding: 0 0 20px 0;
+    padding: 0px 0px 20px 0px;
 }
 
 .about .title{
     font-size: 3em;
-}
-
-.about .col-50 .title{
-    font-size: 2em;
-    padding: 0px 0px 20px 0px;
 }
 
 .col-50{
@@ -533,7 +528,7 @@ header{
     align-items: start;
     max-width: 1200px;
     margin: 0 auto;
-    padding: 20px;
+    padding: 20px 20px 40px 20px;
     gap: 20px;
 }
 .team .box .imgbox{
@@ -569,6 +564,154 @@ header{
 }
 
 
+/* HOW TO BOOK SECTION -- ABOUT PAGE */
+
+.booking-process h2{
+    color: #f7f7f2;
+}
+
+.booking-process {
+    background-color: #222725;
+    color: #f7f7f2;
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.process-container {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+.process-container ol {
+    margin: 30px 0;
+    padding-left: 20px;
+}
+
+.process-container li {
+    margin-bottom: 20px;
+    line-height: 1.6;
+}
+
+.process-container li strong {
+    color: #e59500;
+    text-transform: uppercase;
+    display: block;
+    font-size: 1.1em;
+}
+
+/* External Link Styling */
+.external-link-wrap {
+    margin-top: 40px;
+    text-align: center;
+}
+
+.external-link {
+    color: #e59500;
+    text-decoration: underline;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.external-link:hover {
+    color: #f7f7f2;
+}
+
+
+
+/* EVENTS PAGE */
+.event-schedule{
+    background-color: #f7f7f2;
+    padding-bottom: 30px;
+}
+.event-table{
+    width: 90%;
+    margin: 40px auto;
+    border-collapse: collapse;
+    font-family: "Inter", sans-serif;
+    background-color: #f7f7f2;
+    box-shadow: 0px 10px 20px rgba(0,0,0,0.1);
+}
+
+.event-table thead{
+    background-color: #222725;
+    color: #e59500;
+}
+
+.event-table th, .event-table td{
+    padding: 15px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+.event-table tr:hover{
+    background-color: #22272596;
+}
+
+/* GALLERY SECTION -- EVENTS PAGE*/
+
+.gallery{
+    background-color: #f7f7f2;
+    position: relative;
+    box-shadow: 0px 15px 20px -10px rgba(0, 0, 0, 0.3);
+    z-index: 1;
+}
+
+.gallery-grid{
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 20px;
+    padding: 20px 20px 40px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.gallery-grid img{
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    box-shadow: 0px 15px 20px -10px rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+}
+
+.gallery-grid img:hover{
+    transform: scale(1.05);
+}
+
+.title{
+    font-family: "Playfair Display", serif;
+    font-size: 1.4em;
+    /* text-transform: uppercase; */
+    letter-spacing: 1.1px;
+    padding: 20px 0 0 20px ;
+    color: #222725;
+}
+
+/* GALLERY PAGE */
+
+.large-grid {
+    display: grid;
+    grid-template-columns: 1fr; /* One giant image per row */
+    gap: 50px;
+    max-width: 1000px;
+    margin: 40px auto 0;
+    padding: 0 20px 20px;
+}
+
+.large-grid img {
+    width: 100%;
+    height: auto; /* Maintains the original aspect ratio */
+    border-radius: 12px;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+}
+
+.large-grid figcaption {
+    text-align: center;
+    font-family: "Inter", sans-serif;
+    margin-top: 15px;
+    color: #222725;
+}
 
 /* MOBILE DEVICE STYLING */
 

@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Roboto:ital,wght@0,100..900;1,100..900&family=Savate:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet">
+
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Roboto:ital,wght@0,100..900;1,100..900&family=Savate:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet">
+
+
+    <link rel="stylesheet" href="style.css">
+    <title>Gallery</title>
+</head>
+<body class="gallery-page" id="gallery-page">
+
+    <header>
+        <a href="#" class="logo">The <span>W</span>oodward Exchange</a>
+
+        <i class="fas fa-bars menu-toggle" onclick="toggleMenu()"></i>
+
+            <ul class="navigation" id="menu">
+                <li><a href="index.html" >Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="events.html">Events</a></li>
+                <li><a href="gallery.html" class="active-link">Gallery</a></li>
+                <li><a href="index.html#testimonials-section">Testimonials</a></li>
+                <li><a href="index.html#contact-section">Contact</a></li>
+            </ul>
+        
+    </header>
+
+    <main class="full-gallery">
+        <section class="gallery">
+            <div class="title">
+                <h2>Our Grand Spaces</h2>
+                <p class="text-font">Glimpses of The Woodward Exchange</p>
+            </div>
+
+            <div class="large-grid">
+                <figure>
+                    <img src="https://images.pexels.com/photos/5824829/pexels-photo-5824829.jpeg" alt="Foyer Ceiling">
+                    <figcaption>Grand Foyer Ceiling</figcaption>
+                </figure>
+                
+                <figure>
+                    <img src="https://images.pexels.com/photos/7428770/pexels-photo-7428770.jpeg" alt="Grand Stairwell">
+                    <figcaption>Grand Stairwell</figcaption>
+                </figure>
+
+                <figure>
+                    <img src="https://images.pexels.com/photos/6039205/pexels-photo-6039205.jpeg" alt="Grand Ballroom">
+                    <figcaption>Grand Ballroom - Capacity 300</figcaption>
+                </figure>
+
+
+                 <figure>
+                    <img src="https://images.pexels.com/photos/3835638/pexels-photo-3835638.jpeg" alt="Outdoor Plaza">
+                    <figcaption>Outdoor Plaza - Capacity 450</figcaption>
+                </figure>
+            </div>
+
+        </section>
+    </main>
+
+
+    
+    <footer>
+<div class="footer-container">
+    <div class="footer-text">
+    <p>The <span>W</span>oodward Exchange &copy; 2026</p>
+
+    <img src="Images/lion-logo.png" class="footer-logo" alt="Lion with Crown Brand Icon"> <!-- <a href='https://pngtree.com/freepng/a-vector-logo-design-of-majestic-king-lion_20941485.html'>png image from pngtree.com/</a> -->
+</div>
+
+    <div class="footer-links">
+        <a href="#"><i class="fa-brands fa-instagram"></i></a>
+        <a href="#"><i class="fa-solid fa-phone"></i></a>
+        <a href="#"><i class="fa-solid fa-envelope"></i></a>
+    </div>
+
+    <div class="footer-right">
+    <button id="backToTop" title="Go to top">
+    <i class="fas fa-chevron-up"></i>
+</button>
+</div>
+
+
+</div>
+
+
+
+</footer>
+
+
+
+     <script>
+        function toggleMenu(){
+            const menu = document.getElementById("menu");
+            menu.classList.toggle("active");
+        }
+
+        const backToTopBtn = document.getElementById("backToTop");
+
+        window.onscroll = function(){
+            if (document.body.scrollTop > 400 || document.documentElement.scrollTop > 400) {
+                backToTopBtn.style.display = "block";
+            } else{
+                backToTopBtn.style.display = "none";
+            }
+        };
+
+        backToTopBtn.onclick = function(){
+            window.scrollTo({
+                top:0,
+                behavior: 'smooth'
+            });
+        }
+    </script>
+
+</body>
+</html>
